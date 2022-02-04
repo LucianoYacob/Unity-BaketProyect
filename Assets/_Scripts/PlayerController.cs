@@ -84,10 +84,10 @@ public class PlayerController : MonoBehaviour
     
 #endif
 
-        //En pc modificar el jumpInput a q sea mayor a 0.1;
-        //En android a 30
-        //On pc modify the jumpInput to be greater than 0.1.
-        //In android the jumpInput must be greater than 30.
+        //En pc modificar el jumpInput a q sea mayor a 0.1. (jumpInput > 0.1f);
+        //En android debe ser mayor a 30. (jumpInput > 30f)
+        //On pc modify the jumpInput to be greater than 0.1. (jumpInput > 0.1f)
+        //In android the jumpInput must be greater than 30. (jumpInput > 30f)
         if (jumpInput > 30f && isOnTheGround)
         {
             _rb.AddForce(transform.localPosition.y * Vector3.up.normalized * jumpForce * Time.fixedDeltaTime, ForceMode.Impulse);
